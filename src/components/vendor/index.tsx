@@ -1,6 +1,7 @@
 import { Headings, Vendor } from 'interfaces/vendor';
 import { useState } from 'react';
 import VendorBox from './box';
+import CriteriaBox from './criteria';
 import styles from './styles.module.scss';
 
 interface props {
@@ -9,16 +10,26 @@ interface props {
 }
 
 const Vendors = ({ data, criteria }: props) => {
+  const [leaf, setLeaf] = useState('');
   const [vendors, setVendors] = useState<Vendor[]>(data);
+  const [headings, setHeadings] = useState<Headings[]>(criteria);
   return (
     <div className={styles.container}>
+      <CriteriaBox
+        headings={headings}
+        setHeadings={setHeadings}
+        leaf={leaf}
+        setLeaf={setLeaf}
+      />
       {vendors.map((vendor) => (
         <VendorBox
-          close={() => {}}
-          criteria={criteria}
+          close={() => {
+            setVendors((prev) => prev.filter((val) => val.id !== vendor.id));
+          }}
+          criteria={headings}
           vendor={vendor}
           key={vendor.id}
-          toggle={'Funding History'}
+          toggle={leaf}
         />
       ))}
     </div>

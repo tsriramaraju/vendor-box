@@ -13,69 +13,89 @@
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    position: relative;
+    height: 5.75rem;
+
     .icon {
       color: config.$light_accent;
       font-size: 1.25rem;
-      position: absolute;
-      top: 0.5rem;
-      right: 0.5rem;
+      color: rgb(17, 121, 17);
+
       cursor: pointer;
       &:active {
         transform: scale(0.9);
       }
     }
-    .image {
-      height: 2.5rem;
-    }
+
     .title {
-      font-size: 1.25rem;
-      font-weight: 500;
-      color: config.$dark_shade;
+      font-size: 1.15rem;
+      font-weight: 400;
+      color: config.$main-brand;
     }
   }
+
   .score {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
     border-top: 1px solid config.$light_shade;
-
-    .progress {
-      width: 3.5rem;
-      height: 3.5rem;
-      background-color: white;
-    }
+    padding: 1rem;
+    font-size: 1.1rem;
+    color: config.$dark_shade;
+    height: 5.5rem;
   }
 
-  .value {
+  .criteria {
     width: 100%;
     padding: 1rem;
     border-top: 1px solid config.$light_shade;
+
+    .value {
+      justify-content: space-between;
+      width: 100%;
+      padding-left: 1.5rem;
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .icon {
+      position: absolute;
+      left: 0.25rem;
+      top: 0rem;
+      font-size: 1.25rem;
+      color: config.$light_accent;
+      cursor: pointer;
+    }
+
     .text {
-      color: config.$dark_shade;
       font-size: 1rem;
+      color: config.$dark_shade;
+      padding-left: 1rem;
+    }
+
+    .close {
+      font-size: 1rem;
+      color: red;
+      cursor: pointer;
+      &:active {
+        transform: scale(0.9);
+      }
     }
     .leaf {
       width: 100%;
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
-
-      .value {
-        padding: 0.5rem;
-      }
-      .value:nth-child(1) {
+      .text:nth-child(1) {
         border: none;
         margin-top: 1rem;
       }
-      .value:nth-child(odd) {
+      .text:nth-child(odd) {
         background-color: rgba(221, 221, 240, 0.164);
       }
       .text {
+        width: 100%;
+        border-top: 1px solid config.$light_shade;
         color: rgb(102, 102, 102);
         font-size: 0.9rem;
+        padding: 0.5rem;
       }
     }
   }
