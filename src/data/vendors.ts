@@ -33,6 +33,20 @@ export const vendorData: Vendor[] = [
       {
         name: 'Funding History',
         value: 'Total Funding: $1.2B',
+        leaf: [
+          {
+            name: 'Founded',
+            value: '2007',
+          },
+          {
+            name: 'Key Investors',
+            value: 'Andreessen Horowitz, Greylock Partners',
+          },
+          {
+            name: 'Founders',
+            value: 'Drew Houston, Arash Ferdowsi',
+          },
+        ],
       },
       {
         name: 'Pricing',
@@ -61,6 +75,20 @@ export const vendorData: Vendor[] = [
       {
         name: 'Funding History',
         value: 'Total Funding: $37M',
+        leaf: [
+          {
+            name: 'Founded',
+            value: '2007',
+          },
+          {
+            name: 'Key Investors',
+            value: 'Andreessen Horowitz, Greylock Partners',
+          },
+          {
+            name: 'Founders',
+            value: 'Drew Houston, Arash Ferdowsi',
+          },
+        ],
       },
       {
         name: 'Pricing',
@@ -89,6 +117,20 @@ export const vendorData: Vendor[] = [
       {
         name: 'Funding History',
         value: 'Total Funding: $112M',
+        leaf: [
+          {
+            name: 'Founded',
+            value: '2007',
+          },
+          {
+            name: 'Key Investors',
+            value: 'Andreessen Horowitz, Greylock Partners',
+          },
+          {
+            name: 'Founders',
+            value: 'Drew Houston, Arash Ferdowsi',
+          },
+        ],
       },
       {
         name: 'Pricing',
