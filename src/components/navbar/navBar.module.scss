@@ -1,0 +1,38 @@
+@use '../../scss/config';
+@use '../../scss/breakpoints';
+
+.container {
+  height: 100%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  .profile {
+    height: 15%;
+    width: 100%;
+  }
+  .navLinks {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .logo {
+      width: 90%;
+    }
+    .text {
+      font-size: 0.85rem;
+      color: config.$light-shade;
+    }
+  }
+}

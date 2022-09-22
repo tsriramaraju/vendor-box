@@ -1,0 +1,40 @@
+@use '../../../scss/config';
+@use '../../../scss/breakpoints';
+@use '../../../scss/mixins';
+
+.container {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  .image {
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: config.$br-small;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: center;
+    @include breakpoints.biggerScreens {
+      height: 4rem;
+      width: 4rem;
+    }
+    @include breakpoints.laptops {
+      height: 4rem;
+      width: 4rem;
+    }
+  }
+  .text {
+    font-size: 1rem;
+    color: white;
+    @include mixins.disableSelect;
+    @include breakpoints.biggerScreens {
+      font-size: 1.2rem;
+    }
+    @include breakpoints.laptops {
+      font-size: 1.2rem;
+    }
+  }
+}

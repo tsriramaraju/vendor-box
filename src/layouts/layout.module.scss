@@ -1,0 +1,79 @@
+@use '../scss/breakpoints';
+@use '../scss/config';
+@use '../scss/mixins';
+
+.tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  max-width: 100vw;
+  max-height: 100vw;
+  padding: 1rem;
+  overflow: hidden;
+  .text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 1rem;
+    flex-shrink: 0;
+  }
+}
+
+.layout {
+  display: flex;
+  height: calc(var(--vh, 1vh) * 100);
+  min-height: 500px;
+  width: 100vw;
+  flex-direction: row;
+  overflow-x: hidden;
+  .navArea {
+    height: 100%;
+    width: 8rem;
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    transition: all 0.3s ease-in-out;
+
+    &.open {
+      width: 14%;
+      @include breakpoints.biggerScreens {
+        width: 10%;
+      }
+    }
+  }
+  .mainArea {
+    height: 100%;
+    width: calc(100% - 8rem);
+    flex-shrink: 0;
+    padding: 1.25rem 1.25rem 1.25rem 0.25rem;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoints.smallLaptops {
+      padding: 1rem 1rem 1rem 0.25rem;
+    }
+    @include breakpoints.tablets {
+      padding: 0.75rem 0.75rem 0.75rem 0.25rem;
+    }
+
+    &.open {
+      width: 86%;
+      @include breakpoints.biggerScreens {
+        width: 90%;
+      }
+    }
+
+    .contentArea {
+      height: 100%;
+      width: 100%;
+      background-color: config.$white-bg;
+      border-radius: config.$br-large;
+      box-shadow: 0px 0px 2px 2px rgba(255, 255, 255, 0.25);
+      overflow: hidden;
+    }
+  }
+}
