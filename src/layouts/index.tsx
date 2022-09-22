@@ -26,7 +26,7 @@ export const Layout = ({ children }: props) => {
   return isCompatible ? (
     <div className={styles.tab}>
       <div className={styles.mobileNav}>
-        <Logo className={styles.logo} />
+        <Logo dark className={styles.logo} />
         <FiMenu className={styles.menu} />
       </div>
       <div className={styles.content}>{children}</div>

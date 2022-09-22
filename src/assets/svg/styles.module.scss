@@ -1,6 +1,14 @@
+@use 'scss/breakpoints';
+@use 'scss/config';
+@use 'scss/mixins';
+
 .cls1 {
   fill: #ffffff;
   stroke-width: 2rem;
+}
+.cls1d {
+  fill: config.$dark_shade;
+  stroke-width: 5rem;
 }
 
 .cls2 {
