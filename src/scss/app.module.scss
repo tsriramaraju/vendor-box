@@ -1,0 +1,52 @@
+@use './breakpoints';
+@use './config';
+@use './mixins';
+
+.page {
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  // overflow-x: auto;
+  gap: 2rem;
+
+  .heading {
+    color: config.$light_accent;
+    font-size: 1.5rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+
+    .span {
+      color: config.$dark_shade;
+      // font-size: 1.65rem;
+      // font-weight: 600;
+      padding-left: 0.5rem;
+    }
+
+    .button {
+      margin-left: 2rem;
+      background-color: config.$dark_accent;
+      font-size: 1rem;
+      color: white;
+      padding: 0.25rem 0.5rem;
+      border-radius: config.$br_small;
+      box-shadow: config.$shadow-subtle;
+      cursor: pointer;
+      @include mixins.disableSelect();
+      &:active {
+        transform: scale(0.95);
+      }
+    }
+  }
+
+  .text {
+    width: 100%;
+    text-align: center;
+    color: config.$light_accent;
+    font-size: 1.1rem;
+    padding: 2rem 1rem;
+  }
+}
