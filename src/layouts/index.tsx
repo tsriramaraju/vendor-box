@@ -12,12 +12,18 @@ export const Layout = ({ children }: props) => {
   const [isCompatible, setCompatible] = useState(false);
 
   useEffect(() => {
-    if (window.innerWidth / window.innerHeight < 1) {
+    if (
+      window.innerWidth / window.innerHeight < 1 ||
+      window.innerWidth < 1000
+    ) {
       setCompatible(true);
     } else setCompatible(false);
 
     window.addEventListener('resize', () => {
-      if (window.innerWidth / window.innerHeight < 1) {
+      if (
+        window.innerWidth / window.innerHeight < 1 ||
+        window.innerWidth < 1000
+      ) {
         setCompatible(true);
       } else setCompatible(false);
     });

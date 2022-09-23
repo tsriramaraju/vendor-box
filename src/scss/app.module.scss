@@ -13,6 +13,13 @@
   gap: 1rem;
 
   .heading {
+    @include breakpoints.mobile {
+      display: none;
+    }
+    @include breakpoints.tablets {
+      display: none;
+    }
+
     color: config.$light_accent;
     font-size: 1.5rem;
     font-weight: 500;
