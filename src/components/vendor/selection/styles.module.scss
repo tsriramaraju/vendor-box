@@ -1,0 +1,66 @@
+@use 'scss/breakpoints';
+@use 'scss/config';
+@use 'scss/mixins';
+
+.container {
+  padding: 0.5rem;
+  position: relative;
+  .heading {
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    color: config.$light_accent;
+    cursor: pointer;
+    @include mixins.disableSelect();
+    .icon {
+      margin-left: 0.5rem;
+    }
+  }
+
+  .overlay {
+    width: 15rem;
+    border-radius: config.$br_small;
+    background-color: config.$light_shade;
+    height: 0rem;
+    position: absolute;
+    top: 85%;
+    overflow-y: auto;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    &.active {
+      height: 10rem;
+      padding: 0.5rem;
+
+      &.small {
+        height: 4rem;
+      }
+    }
+
+    .errorText {
+      width: 100%;
+      text-align: center;
+      padding-top: 0.75rem;
+    }
+
+    .button {
+      display: flex;
+      border-radius: config.$br_small;
+      padding: 0.35rem 0.5rem;
+      cursor: pointer;
+      background-color: config.$main_brand;
+      align-items: center;
+      justify-content: space-between;
+      @include mixins.disableSelect();
+      .text {
+        color: white;
+        font-size: 0.9rem;
+      }
+      .icon {
+        color: white;
+      }
+    }
+  }
+}

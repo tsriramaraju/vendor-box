@@ -1,10 +1,5 @@
 import { Headings, Vendor } from 'interfaces/vendor';
-import {
-  FiChevronDown,
-  FiChevronUp,
-  FiPlusCircle,
-  FiXCircle,
-} from 'react-icons/fi';
+import { FiChevronDown, FiChevronUp, FiXCircle } from 'react-icons/fi';
 import NewVendor from './newVendor';
 import styles from './styles.module.scss';
 
@@ -17,6 +12,7 @@ interface props {
   setVendors: (vendors: Vendor[]) => void;
   vendors: Vendor[];
   setRemainingVendors: (vendors: Vendor[]) => void;
+  setRemainingHeadings: (prev: any) => void;
 }
 
 const CriteriaBox = ({
@@ -28,6 +24,7 @@ const CriteriaBox = ({
   setVendors,
   vendors,
   setRemainingVendors,
+  setRemainingHeadings,
 }: props) => {
   return (
     <div className={styles.container}>
@@ -60,6 +57,7 @@ const CriteriaBox = ({
                 setHeadings(
                   headings.filter((val) => val.name !== heading.name)
                 );
+                setRemainingHeadings((prev: any) => [...prev, heading]);
               }}
               className={styles.close}
             />
