@@ -1,7 +1,6 @@
 import { Headings } from 'interfaces/vendor';
 import {
   FiChevronDown,
-  FiChevronRight,
   FiChevronUp,
   FiPlusCircle,
   FiXCircle,

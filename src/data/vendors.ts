@@ -36,15 +36,15 @@ export const vendorData: Vendor[] = [
         leaf: [
           {
             name: 'Founded',
-            value: '2007',
+            value: '2002',
           },
           {
             name: 'Key Investors',
-            value: 'Andreessen Horowitz, Greylock Partners',
+            value: 'Harrison Ford ',
           },
           {
             name: 'Founders',
-            value: 'Drew Houston, Arash Ferdowsi',
+            value: 'Melissa Mayer',
           },
         ],
       },
@@ -120,15 +120,15 @@ export const vendorData: Vendor[] = [
         leaf: [
           {
             name: 'Founded',
-            value: '2007',
+            value: '2012',
           },
           {
             name: 'Key Investors',
-            value: 'Andreessen Horowitz, Greylock Partners',
+            value: 'Sebastian Thrun, Greylock Partners',
           },
           {
             name: 'Founders',
-            value: 'Drew Houston, Arash Ferdowsi',
+            value: 'Nicholas Richards',
           },
         ],
       },
@@ -143,6 +143,90 @@ export const vendorData: Vendor[] = [
       {
         name: 'Customer Case Studies',
         value: '2 Customer Case Studies found',
+      },
+    ],
+  },
+  {
+    name: 'Zoho',
+    logo: 'https://www.zoho.com/branding/images/zoho-logo-512px.png',
+    score: 9,
+    id: '4',
+    data: [
+      {
+        name: 'Product Description',
+        value: 'Zoho is a CRM software',
+      },
+      {
+        name: 'Funding History',
+        value: 'Bootstrapped',
+        leaf: [
+          {
+            name: 'Founded',
+            value: '2003',
+          },
+          {
+            name: 'Key Investors',
+            value: 'N/A',
+          },
+          {
+            name: 'Founders',
+            value: 'Sridhar Vembu, Sujith Chandran',
+          },
+        ],
+      },
+      {
+        name: 'Pricing',
+        value: 'www.Zoho.com/pricing',
+      },
+      {
+        name: 'Features',
+        value: '10 different features',
+      },
+      {
+        name: 'Customer Case Studies',
+        value: '30 Customer Case Studies found',
+      },
+    ],
+  },
+  {
+    name: 'Calendly',
+    logo: 'https://logos-world.net/wp-content/uploads/2021/06/Calendly-New-Logo.png',
+    score: 9,
+    id: '5',
+    data: [
+      {
+        name: 'Product Description',
+        value: 'Calendly is a scheduling software',
+      },
+      {
+        name: 'Funding History',
+        value: 'Total Funding: $5M',
+        leaf: [
+          {
+            name: 'Founded',
+            value: '2002',
+          },
+          {
+            name: 'Key Investors',
+            value: 'Sequoia Capital, Accel Partners',
+          },
+          {
+            name: 'Founders',
+            value: 'Tope Awotona, Logan Lenz',
+          },
+        ],
+      },
+      {
+        name: 'Pricing',
+        value: 'www.calendly.com/pricing',
+      },
+      {
+        name: 'Features',
+        value: '2 different features',
+      },
+      {
+        name: 'Customer Case Studies',
+        value: '9 Customer Case Studies found',
       },
     ],
   },
