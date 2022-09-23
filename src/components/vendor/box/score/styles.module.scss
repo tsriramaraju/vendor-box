@@ -1,0 +1,17 @@
+@use 'scss/breakpoints';
+@use 'scss/config';
+@use 'scss/mixins';
+
+.score {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border-top: 1px solid config.$light_shade;
+
+  .progress {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}

@@ -1,8 +1,7 @@
 import { Headings, Vendor } from 'interfaces/vendor';
 import { FiX } from 'react-icons/fi';
-import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
-import 'react-circular-progressbar/dist/styles.css';
 import styles from './styles.module.scss';
+import Score from './score';
 
 interface props {
   vendor: Vendor;
@@ -19,16 +18,7 @@ const VendorBox = ({ criteria, vendor, toggle, close }: props) => {
         <img className={styles.image} src={vendor.logo} alt={vendor.name} />
         <h3 className={styles.title}>{vendor.name}</h3>
       </div>
-      <div className={styles.score}>
-        <CircularProgressbar
-          className={styles.progress}
-          text={vendor.score.toString()}
-          background
-          minValue={0}
-          value={vendor.score}
-          maxValue={10}
-        />
-      </div>
+      <Score score={vendor.score} />
       {criteria.map(({ name, leaf }) => {
         const exists = vendor.data.find((val) => val.name === name);
         const value = exists ? exists.value : 'N/A';
