@@ -6,33 +6,6 @@
   border: 1px solid config.$light_shade;
   box-shadow: config.$shadow-subtle;
 
-  .heading {
-    padding: 0.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    height: 5.75rem;
-
-    .icon {
-      color: config.$light_accent;
-      font-size: 1.25rem;
-      color: rgb(17, 121, 17);
-
-      cursor: pointer;
-      &:active {
-        transform: scale(0.9);
-      }
-    }
-
-    .title {
-      font-size: 1.15rem;
-      font-weight: 400;
-      color: config.$main-brand;
-    }
-  }
-
   .score {
     border-top: 1px solid config.$light_shade;
     padding: 1rem;

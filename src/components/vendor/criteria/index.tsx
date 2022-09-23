@@ -1,10 +1,11 @@
-import { Headings } from 'interfaces/vendor';
+import { Headings, Vendor } from 'interfaces/vendor';
 import {
   FiChevronDown,
   FiChevronUp,
   FiPlusCircle,
   FiXCircle,
 } from 'react-icons/fi';
+import NewVendor from './newVendor';
 import styles from './styles.module.scss';
 
 interface props {
@@ -12,16 +13,30 @@ interface props {
   setHeadings: (headings: Headings[]) => void;
   setLeaf: (leaf: string) => void;
   leaf: string;
+  remainingVendors: Vendor[];
+  setVendors: (vendors: Vendor[]) => void;
+  vendors: Vendor[];
+  setRemainingVendors: (vendors: Vendor[]) => void;
 }
 
-const CriteriaBox = ({ headings, setHeadings, leaf, setLeaf }: props) => {
+const CriteriaBox = ({
+  headings,
+  setHeadings,
+  leaf,
+  setLeaf,
+  remainingVendors,
+  setVendors,
+  vendors,
+  setRemainingVendors,
+}: props) => {
   return (
     <div className={styles.container}>
-      <div className={styles.heading}>
-        <FiPlusCircle className={styles.icon} />
-
-        <h3 className={styles.title}>Add New Vendor</h3>
-      </div>
+      <NewVendor
+        remainingVendors={remainingVendors}
+        setVendors={setVendors}
+        vendors={vendors}
+        setRemainingVendors={setRemainingVendors}
+      />
       <p className={styles.score}>Overall Score</p>
       {headings.map((heading) => (
         <div key={heading.name} className={styles.criteria}>

@@ -11,7 +11,12 @@ interface props {
 
 const Vendors = ({ data, criteria }: props) => {
   const [leaf, setLeaf] = useState('');
-  const [vendors, setVendors] = useState<Vendor[]>(data);
+  const [vendors, setVendors] = useState<Vendor[]>(
+    data.filter((vendor, i) => i < 4)
+  );
+  const [remainingVendors, setRemainingVendors] = useState<Vendor[]>(
+    data.filter((vendor, i) => i >= 4)
+  );
   const [headings, setHeadings] = useState<Headings[]>(criteria);
   return (
     <div className={styles.container}>
@@ -20,11 +25,16 @@ const Vendors = ({ data, criteria }: props) => {
         setHeadings={setHeadings}
         leaf={leaf}
         setLeaf={setLeaf}
+        remainingVendors={remainingVendors}
+        setVendors={setVendors}
+        vendors={vendors}
+        setRemainingVendors={setRemainingVendors}
       />
       {vendors.map((vendor) => (
         <VendorBox
           close={() => {
             setVendors((prev) => prev.filter((val) => val.id !== vendor.id));
+            setRemainingVendors((prev) => [...prev, vendor]);
           }}
           criteria={headings}
           vendor={vendor}
